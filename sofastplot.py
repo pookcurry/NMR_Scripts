@@ -1,11 +1,3 @@
-# Modified script to automatically detect apo spectrum, allow CLI, and improve modularity
-
-# use sequence.txt to add residues onto the plot
-# use -xlim if the C-terminal residues are not fully assigned
-# use -ylim if manually setting the axis limits, eg. to compare with another spectrum
-
-# python .\CSPnew.py .\cxcl8+matloop.csv -xlim 154  -seq .\cxcl8wt.txt -psi .\cxcl8wt.ss2
-
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrow
 import numpy as np
