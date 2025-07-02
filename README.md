@@ -14,7 +14,7 @@ Briefly:
 - Move SG into new chemical shift lists
 - open 'CM' module
 - set up the titration input data and create input data table following the instructions
-- export the input data table as .csv (should have two entries per residue for both 1H and 15N)
+- export the input data table as .csv (correct format will have two entries per residue for both 1H and 15N)
 -   See uploaded .csv files for examples
 - To get the baseline noise for CPMG and HetNOE data, zoom into a region in the spectrum without any peaks,
   right click estimate noise, and manually add that to the 'signalToNoiseRatio' column (I know it's not actually signal to noise but whatever)
