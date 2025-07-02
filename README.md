@@ -6,11 +6,11 @@ Briefly:
 - follow all steps to pick and assign peaks in each HSQC spectrum
 - create a spectrum group (SG)
 - populate the values with relevant information,
--   CSP/IL plots and Kd calculation use titrant conc per spectrum (0, 15, 30, 60, 120, etc) and global value for labelled protein conc (30)
--   HDexchange use times per spectrum (100, 200, 300, 400, etc) and global value (1)
--   T1 and T1rho use relaxation delay per spectrum (1, 20, 40, 60, etc) and global value (1)
--   CPMG use echo number per spectrum (1, 3, 5, 8, etc) and global value as fixed tau delay (40)
--   HetNOE use spectrum number (0, 1) and global value as arbitrary value (1)
+  - CSP/IL plots and Kd calculation use titrant conc per spectrum (0, 15, 30, 60, 120, etc) and global value for labelled protein conc (30)
+  - HDexchange use times per spectrum (100, 200, 300, 400, etc) and global value (1)
+  - T1 and T1rho use relaxation delay per spectrum (1, 20, 40, 60, etc) and global value (1)
+  - CPMG use echo number per spectrum (1, 3, 5, 8, etc) and global value as fixed tau delay (40)
+  - HetNOE use spectrum number (0, 1) and global value as arbitrary value (1)
 - Move SG into new chemical shift lists
 - open 'CM' module
 - set up the titration input data and create input data table
