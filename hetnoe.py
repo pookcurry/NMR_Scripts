@@ -401,15 +401,15 @@ def compile_intensity_data(intensity_data1, error_data1, intensity_data2=None, e
             res_ids_2.append(res)
             hetnoe_values_2.append(ratio)
 
-        if error_data2 and res in error_data2:
-            errs = error_data2[res]
-            if isinstance(errs, list):
-                error_val = np.mean([v for _, v in errs])
+            if error_data2 and res in error_data2:
+                errs = error_data2[res]
+                if isinstance(errs, list):
+                    error_val = np.mean([v for _, v in errs])
+                else:
+                    error_val = errs
+                hetnoe_errors_2.append(error_val)
             else:
-                error_val = errs
-            hetnoe_errors_2.append(error_val)
-        else:
-            hetnoe_errors_2.append(None)
+                hetnoe_errors_2.append(None)
 
     return {
         "res_ids_1": res_ids_1,
@@ -423,10 +423,10 @@ def compile_intensity_data(intensity_data1, error_data1, intensity_data2=None, e
 def plot_hetnoe(compiled, sequence=None, psipred_file=None, y_limit=None, x_limit=None, save=False, skip_nterm=0):
     res_ids_1 = compiled['res_ids_1']
     values_1 = compiled['hetnoe_values_1']
-    errors_1 = compiled.get('hetnoe_errors_1')  
+    errors_1 = compiled['hetnoe_errors_1']  
     res_ids_2 = compiled['res_ids_2']
     values_2 = compiled['hetnoe_values_2']
-    errors_2 = compiled.get('hetnoe_errors_2')  
+    errors_2 = compiled['hetnoe_errors_2']
 
     global_max = max(values_1 + values_2) if (values_1 and values_2) else 1
     ymax = y_limit if y_limit else min(np.ceil((global_max + 1e-6) / 1) * 1, global_max)
@@ -504,7 +504,12 @@ def main():
         comparisons2, noise_comparisons2 = calculate_height(data_spec2, apo2, scans2, baseline_noise_2)
         res_intensity_data2, res_error_data2 = collect_intensity_data(data2, comparisons2, noise_comparisons2)
 
+    print("1", res_error_data1)
+    print("2", res_error_data2)
+
     compiled_data = compile_intensity_data(res_intensity_data1, res_error_data1, res_intensity_data2, res_error_data2)
+
+    print("compiled", compiled_data)
 
     plot_hetnoe(
         compiled_data,
