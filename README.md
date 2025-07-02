@@ -18,4 +18,4 @@ Briefly:
 -   See uploaded .csv files for examples
 - To get the baseline noise for CPMG and HetNOE data, zoom into a region in the spectrum without any peaks, right click estimate noise, and manually add baseline noise estimates to the 'signalToNoiseRatio' column per spectra (I know it's not actually signal to noise but whatever)
 
-Some scripts can use .txt and .ss2 files to add overlay the protein structure and secondary structure map onto each plot. Type 'python SCRIPTNAME.py -h' to show the different flags for each script and what ways you can customise each plot.
+Some scripts can use .txt and .ss2 files to add overlay the protein structure and secondary structure map onto each plot. Type 'python SCRIPTNAME.py -h' to show the flags for each script and how to customise each plot.
