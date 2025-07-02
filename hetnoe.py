@@ -504,12 +504,7 @@ def main():
         comparisons2, noise_comparisons2 = calculate_height(data_spec2, apo2, scans2, baseline_noise_2)
         res_intensity_data2, res_error_data2 = collect_intensity_data(data2, comparisons2, noise_comparisons2)
 
-    print("1", res_error_data1)
-    print("2", res_error_data2)
-
     compiled_data = compile_intensity_data(res_intensity_data1, res_error_data1, res_intensity_data2, res_error_data2)
-
-    print("compiled", compiled_data)
 
     plot_hetnoe(
         compiled_data,
