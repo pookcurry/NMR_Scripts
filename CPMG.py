@@ -5,7 +5,6 @@ import argparse
 import re
 import pandas as pd
 import math
-from scipy.optimize import curve_fit
 
 # --- Matplotlib Setup ---
 def configure_matplotlib():
