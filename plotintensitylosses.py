@@ -1,13 +1,6 @@
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyArrow
-import numpy as np
-from matplotlib.ticker import AutoMinorLocator
-import matplotlib.ticker as ticker
-from collections import defaultdict
 import argparse
-import re
 import pandas as pd
-
 
 plt.rcParams.update({
     'pdf.fonttype': 42,
