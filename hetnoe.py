@@ -438,14 +438,14 @@ def plot_hetnoe(compiled, sequence=None, psipred_file=None, y_limit=None, x_limi
         ax.errorbar(
             res_ids_1, values_1, yerr=errors_1,
             fmt='-o', color='tab:blue', capsize=3, markersize=4,
-            label='CXCL8'
+            label='LABEL1'
         )
 
     if values_2:
         ax.errorbar(
             res_ids_2, values_2, yerr=errors_2,
             fmt='-o', color='tab:red', capsize=3, markersize=4,
-            label='CXCL8 + CAML (1 : 0.25)'
+            label='LABEL2'
         )
 
     ax.set_ylim(-0.5, ymax * 2)
