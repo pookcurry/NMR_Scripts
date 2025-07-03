@@ -442,14 +442,14 @@ def plot_t1rho(fit_result, sequence=None, psipred_file=None, y_limit=None, x_lim
     ax = plt.subplot(111)
 
     if values_1:
-        ax.plot(res_ids_1, values_1, '-o', color='tab:blue', label='CXCL8')
+        ax.plot(res_ids_1, values_1, '-o', color='tab:blue', label='LABEL1')
         ax.errorbar(
         res_ids_1, values_1, yerr=errors_1,
         fmt='o', color='tab:blue', capsize=3, markersize=4
     )
 
     if values_2:
-        ax.plot(res_ids_2, values_2, '-o', color='tab:red', label='CXCL8 + CAML (1 : 0.25)')
+        ax.plot(res_ids_2, values_2, '-o', color='tab:red', label='LABEL2')
         ax.errorbar(
         res_ids_2, values_2, yerr=errors_2,
         fmt='o', color='tab:red', capsize=3, markersize=4
@@ -508,12 +508,12 @@ def plot_r1rho(fit_result, sequence=None, psipred_file=None, y_limit=None, x_lim
 
     # Plot dataset 1 (if data exists)
     if len(r1rho_values_1) > 0:
-        ax.plot(res_ids_1, r1rho_values_1, '-o', color='tab:blue', label='CXCL8')
+        ax.plot(res_ids_1, r1rho_values_1, '-o', color='tab:blue', label='LABEL1')
         ax.errorbar(res_ids_1, r1rho_values_1, yerr=r1rho_errors_1, fmt='o', color='tab:blue', capsize=3, markersize=4)
 
     # Plot dataset 2 (if data exists)
     if len(r1rho_values_2) > 0:
-        ax.plot(res_ids_2, r1rho_values_2, '-o', color='tab:red', label='CXCL8 + CAML (1 : 0.25)')
+        ax.plot(res_ids_2, r1rho_values_2, '-o', color='tab:red', label='LABEL2')
         ax.errorbar(res_ids_2, r1rho_values_2, yerr=r1rho_errors_2, fmt='o', color='tab:red', capsize=3, markersize=4)
 
     # Set axis limits
