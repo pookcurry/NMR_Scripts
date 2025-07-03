@@ -17,6 +17,6 @@ Briefly:
 - export the input data table as .csv (correct format will have two entries per residue for both 1H and 15N)
   - see uploaded .csv files for examples
   - eg. if you have a different number of scans for each experiment, add a new column called scans and populate with the values per spectrum
-- To get the baseline noise for CPMG and HetNOE data, zoom into a region in the spectrum without any peaks, right click estimate noise, and manually add baseline noise estimates to the 'signalToNoiseRatio' column per spectra (I know it's not actually signal to noise but I did not want to add a new column)
+- To get the baseline noise for CPMG and HetNOE data, zoom into a region in the spectrum without any peaks, right click estimate noise, and manually add baseline noise estimates to the 'signalToNoiseRatio' column per spectrum (I know it's not actually signal to noise but I did not want to add a new column)
 
-Some scripts can use .txt and .ss2 files to add overlay the protein structure and secondary structure map onto each plot. Type 'python SCRIPTNAME.py -h' to show the flags for each script and how to customise each plot.
+Some scripts can use .txt and .ss2 files to overlay the protein sequence and secondary structure onto each plot. Type 'python SCRIPTNAME.py -h' to show the flags for each script and how to customise each plot.
